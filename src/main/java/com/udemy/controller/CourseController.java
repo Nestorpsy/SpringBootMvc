@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.udemy.entity.Curso;
+import com.udemy.model.CourseModel;
 import com.udemy.service.CourseService;
 
 @Controller
@@ -29,15 +29,17 @@ public class CourseController {
 	public ModelAndView liastAllCourses() {
 		LOG.info("CourseController_liastAllCourses___RUN");
 		ModelAndView view = new ModelAndView(COURSES_HOME);
+		view.addObject("curso", new CourseModel());
 		view.addObject("coursesList",courseService.listAllCourses());
 		LOG.info("CourseController_liastAllCourses___END");
 		return view;
 	}
 	
 	@PostMapping("/addCourse")
-	public String addCourse(@ModelAttribute("course") Curso curso) {
+	public String addCourse(@ModelAttribute("curso") CourseModel model) {
 		LOG.info("CourseController_addCourse___RUN");
-		courseService.addCourse(curso);
+		LOG.info("Course addes is: "+model);
+		courseService.addCourse(model);
 		LOG.info("CourseController_addCourse___END");
 		return "redirect:/courses/listCourses";
 	}

@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class Curso {
 	@Id
 	@GeneratedValue
-	@Column(name="idCurso")
+	@Column(name="id")
 	private int id;
 	@Column(name="name")
 	private String name;
@@ -23,8 +23,16 @@ public class Curso {
 	private int hours;
 
 	public Curso() {
-	}
+	}	
 	
+	public Curso(String name, String description, double price, int hours) {
+		super();
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.hours = hours;
+	}
+
 	public Curso(int id, String name, String description, double price, int hours) {
 		super();
 		this.id = id;

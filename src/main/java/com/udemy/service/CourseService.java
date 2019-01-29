@@ -2,11 +2,11 @@ package com.udemy.service;
 
 import java.util.List;
 
-import com.udemy.entity.Curso;
+import com.udemy.model.CourseModel;
 
 public interface CourseService {	
-	public abstract List<Curso> listAllCourses();
-	public abstract Curso addCourse(Curso curso);
+	public abstract List<CourseModel> listAllCourses();
+	public abstract CourseModel addCourse(CourseModel curso);
 	public abstract boolean removeCourse(int id);
-	public abstract Curso updateCourse(Curso curso);
+	public abstract CourseModel updateCourse(CourseModel curso);
 }
