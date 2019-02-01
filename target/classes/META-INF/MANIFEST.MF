@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
+Built-By: nestorpsy
+Build-Jdk: 10.0.2
 Implementation-Title: backendninja
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Nestorpsy
 Implementation-Vendor-Id: com.udemy
-Build-Jdk: 1.8.0_201
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/backendninja
 Created-By: Maven Integration for Eclipse

@@ -9,5 +9,5 @@ import com.udemy.entity.Contact;
 
 @Repository("contactRepo")
 public interface ContactRepo extends JpaRepository<Contact, Serializable>{
-
+	
 }
