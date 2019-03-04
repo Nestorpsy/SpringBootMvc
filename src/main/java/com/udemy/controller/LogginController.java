@@ -36,7 +36,7 @@ public class LogginController {
 		if (credentials != null && 
 				credentials.getUser().equals("user") &&
 				credentials.getPassword().equals("user"))
-			return "contacts";
+			return "redirect:/contact/list";
 		return "redirect:/login?error";
 	}
 }
